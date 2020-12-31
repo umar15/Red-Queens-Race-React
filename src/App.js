@@ -1,7 +1,23 @@
 import React from "react";
 import "./App.css";
+import useWebAnimations from "@wellyshen/use-web-animations";
 
 function App() {
+	var scenaryFrames = [
+		{ transform: "transalteX(100%" },
+		{ transform: "transalteX(-100%" },
+	];
+
+	var sceneryTimingBackground = {
+		duration: 36000,
+		iterations: Infinity,
+	};
+
+	const { ref } = useWebAnimations({
+		keyframes: scenaryFrames,
+		timing: sceneryTimingBackground,
+	});
+
 	return (
 		<div className="wrapper">
 			<div className="sky"></div>
@@ -16,15 +32,16 @@ function App() {
 				</div>
 			</div>
 
-			<div className="scenery foreground1">
+			{/* <div className="scenery foreground1">
 				<img
+					className="palm3"
 					src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/palm3_small.png"
 					alt=" "
 					srcSet="https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/palm3_small.png 2x"
 				/>
 			</div>
 
-			<div class="scenery foreground2">
+			<div className="scenery foreground2">
 				<img
 					className="bush"
 					src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/bush_small.png"
@@ -32,22 +49,22 @@ function App() {
 					srcSet="https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/bush_small.png 2x"
 				/>
 				<img
-					className="w_rook_upright"
+					className="w-rook-upright"
 					src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/w_rook_upright_small.png"
 					alt=" "
 					srcSet="https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/w_rook_upright_small.png 2x"
 				/>
-			</div>
+			</div> */}
 
 			<div className="scenery background1">
 				<img
-					className="r_pawn_upright"
+					className="r-pawn-upright"
 					src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/r_pawn_upright_small.png"
 					srcSet="https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/r_pawn_upright.png 2x"
 					alt=" "
 				/>
 				<img
-					className="w_rook"
+					className="w-rook"
 					src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/w_rook_small.png"
 					srcSet="https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/w_rook.png 2x"
 					alt=" "
@@ -62,14 +79,14 @@ function App() {
 
 			<div className="scenery background2">
 				<img
-					className="r_pawn"
+					className="r-pawn"
 					src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/r_pawn_small.png"
 					srcSet="https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/r_pawn.png 2x"
 					alt=" "
 				/>
 
 				<img
-					className="r_knight"
+					className="r-knight"
 					src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/r_knight_small.png"
 					srcSet="https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/r_knight.png 2x"
 					alt=" "

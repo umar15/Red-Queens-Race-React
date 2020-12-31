@@ -96,7 +96,7 @@ function App() {
 				.updatePlaybackRate(alice.getAnimation().playbackRate * 1.1);
 			adjustBackgroundPlayback();
 		};
-	}, [alice.animate]);
+	}, [alice, background1, background2, foreground1, foreground2]);
 
 	return (
 		<div className="wrapper">
